@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Regisztrációs Űrlap</title>
+</head>
+<body>
+
+    <main>
+        <section id="form-section">
+            <h1>Regisztráció</h1>
+            <p>Kérjük töltse ki az alábbi adatokat!</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Név:</label>
+                    <input class="input" type="text" id="name">
+                </div>   
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input class="input email" type="email" id="email">
+                </div>   
+                <div class="form-group">
+                    <label for="confirmation">E-mail cím megerősítése</label>
+                    <input class="input email" type="email" id="confirmation">
+                </div>   
+                <div class="form-group">
+                    <label for="select">Honnan hallott rólunk?</label>
+                    <select class="input" name="select" id="select">
+                        <option value="" selected disabled>Kérem válasszon az alábbi lehetőségek közül:</option>
+                        <option value="net">Internetről</option>
+                        <option value="tv">Televízióból</option>
+                        <option value="else">Egyéb helyről</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="checkbox" id="check-label">Adatkezelési nyilatkozat elfogadása</label>
+                    <input type="checkbox" id="checkbox">
+                </div>
+
+                <button>Regisztráció</button>
+
+                <p class="d-unvisible" id="error-message"></p>
+            </form>
+        </section>
+
+        <section class="d-none fade-in" id="success-section">
+            <h1>Köszönjük!</h1>
+            <p>Sikeres regisztráció!</p>
+            <div class="circle pulsate"></div>
+        </section>
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>
